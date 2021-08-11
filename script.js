@@ -6,19 +6,19 @@ let sender;
 if (url.searchParams.get('by') != null) {
   sender = url.searchParams.get('by');
 } else {
-  sender = "Mey lintang";
+  sender = "ilham";
 }
 
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Hallo sayang", "Aku ada pertanyaan nih buat kamu", "question").then(function () {
-    Swal.fire("Jawab yang jujur ya!").then(function () {
-      Swal.fire("Awas aja kalau kamu bohong", "", "error").then(function () {
+  Swal.fire("Hallo ira sayang", "Aku ada pertanyaan nih buat ira", "question").then(function () {
+    Swal.fire("Jawab yang jujur ya iraa!").then(function () {
+      Swal.fire("Awas aja kalau ira bohong", "", "error").then(function () {
 
         const {
           value: name
         } = Swal.fire({
-          title: 'Masukin nama kamu dulu dong',
+          title: 'Masukin nama lengkap ira dulu dong',
           input: 'text',
           inputLabel: '',
           showCancelButton: true,
@@ -31,7 +31,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
           }
         }).then(function () {
           const pertanyaan = Swal.fire({
-            title: `${nama} kamu sayang aku gak? ${sender}?`,
+            title: `${nama} ira sayang aku gak? ${sender}?`,
             showDenyButton: true,
             showCancelButton: false,
             confirmButtonText: `Sayang`,
@@ -69,8 +69,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('yahhh , emang ga kangen sama pacar sendiri', '', 'error').then(function () {
-                          Swal.fire('Yaudah deh okee sayangg :((')
+                        Swal.fire('yahhh , emang ga kangen sama calon suami sendiri', '', 'error').then(function () {
+                          Swal.fire('Yaudah deh okee sayangg huhu:((')
                         })
                       }
                     })
